@@ -1,26 +1,50 @@
-# ember-history-back
+# Ember-history-back
 
-This README outlines the details of collaborating on this Ember addon.
+This is an Ember-CLI addon. It provides a service which keeps an history of the visited routes. You will be able to know what is the current route, what was the previously visited routes and transition to previous route. This addon also working with dynamic routes.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-history-back`
-* `npm install`
+Using ember-cli:
 
-## Running
+`ember install ember-history-back`
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+## Usage
 
-## Running Tests
+By default, addon saving all visited routes. The service `routeHistoryBack` is injected into all routes of your application.
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+By default, only 10 items are saved in the history. You can increase the size of the stack by setting maxHistoryLength.
 
-## Building
+```
+this.set('routeHistory.maxHistoryLength', 50);
+```
 
-* `ember build`
+You need to use route option `skipRouteHistory` for skip adding this route to history.
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+You need to use route option `clearHistory` for clear all history when user open this route.
+
+```
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+    
+    /* This route will not be added to history */
+    skipRouteHistory: true,
+    
+    /* Visited routes history will be cleared when user opn this route */
+    clearHistory: true 
+});
+```
+
+You can create history back button in 2 ways:
+
+* Inject service `routeHistoryBack` into your controller or component, and use action `transitionToPrevious`
+
+```
+<a {{action routeHistoryBack.transitionToPrevious}}>Back</a>
+```
+
+* Inject service `routeHistoryBack` into your controller or component, and use `dynamic-link` addon
+
+```
+{{#dynamic-link params=routeHistory.previous class="btn btn-primary"}}Back{{/dynamic-link}}
+```

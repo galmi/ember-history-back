@@ -1,7 +1,7 @@
 {
   "name": "ember-history-back",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "This is an Ember-CLI addon. It provides a service which keeps an history of the visited routes. This addon also working with dynamic routes.",
   "keywords": [
     "ember-addon"
   ],
@@ -37,8 +37,11 @@
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~2.16.0",
+    "ember-source": "^2.12.2",
     "loader.js": "^4.2.3"
+  },
+  "optionalDependencies": {
+    "dynamic-link": "^0.2.3"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"

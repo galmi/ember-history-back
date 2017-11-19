@@ -1,6 +1,6 @@
 {
   "name": "ember-history-back",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This is an Ember-CLI addon. It provides a service which keeps an history of the visited routes. This addon also working with dynamic routes.",
   "keywords": [
     "ember-addon",

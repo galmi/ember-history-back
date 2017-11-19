@@ -15,7 +15,7 @@ By default, addon saving all visited routes. The service `routeHistoryBack` is i
 By default, only 10 items are saved in the history. You can increase the size of the stack by setting maxHistoryLength.
 
 ```
-this.set('routeHistory.maxHistoryLength', 50);
+this.set('routeHistoryBack.maxHistoryLength', 50);
 ```
 
 You need to use route option `skipRouteHistory` for skip adding this route to history.

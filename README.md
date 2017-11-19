@@ -46,5 +46,5 @@ You can create history back button in 2 ways:
 * Inject service `routeHistoryBack` into your controller or component, and use `dynamic-link` addon
 
 ```
-{{#dynamic-link params=routeHistory.previous class="btn btn-primary"}}Back{{/dynamic-link}}
+{{#dynamic-link params=routeHistoryBack.previous class="btn btn-primary"}}Back{{/dynamic-link}}
 ```

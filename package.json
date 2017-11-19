@@ -3,7 +3,15 @@
   "version": "0.1.0",
   "description": "This is an Ember-CLI addon. It provides a service which keeps an history of the visited routes. This addon also working with dynamic routes.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-cli",
+    "route",
+    "router",
+    "emberjs",
+    "service",
+    "history",
+    "goBack",
+    "history.back"
   ],
   "license": "MIT",
   "author": "",
@@ -11,7 +19,10 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/galmi/ember-history-back.git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
